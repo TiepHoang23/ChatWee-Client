@@ -17,14 +17,22 @@ const GameBoard = () => {
     const [blackTile, setBlackTile] = useState([2, 2])
 
     // To update, swap the selected tile with the empty tile
-    const updateGame = () => {}
+    const updateGame = (row, col, color) => {
+        // Update the map
+        let map = boardState;
+        map[row][col][2] = 'black';
+        map[blackTile[0]][blackTile[1]][2] = color;
+        setBoard(map);
+        // Update the black tile
+        setBlackTile([row, col])
+    }
 
     return (
         <div className="game-board">
             {boardState.map(row => (
                 <Stack direction="horizontal">
                     {row.map(cell => (
-                        <BoardTile value={cell} />
+                        <BoardTile value={cell} blackTileCoor={blackTile} updateGame={updateGame} />
                     ))}
                 </Stack>
             ))
