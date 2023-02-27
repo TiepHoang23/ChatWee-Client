@@ -1,9 +1,8 @@
-import GamePage from "./components/GamePage";
-
 function App() {
-  return <div className='App'>
-    <GamePage />
-  </div>;
+  return(
+  <div className='App'>
+    Hello World
+  </div>);
 }
 
 export default App;
