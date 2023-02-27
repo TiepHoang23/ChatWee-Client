@@ -50,18 +50,49 @@ form {
 
 
   }
-  .container {
-    padding: 16px;
-  }
   .element-form{
     margin: 20px;
   }
  
-
+.text-danger{
+  color: #d8001d;
+  font-weight: 500;
+}
   @media screen and (max-width: 600px) {
     span.psw {
       display: block;
       float: none;
     }
-   
+    .container{
+      width: 20em;
+    }
+  }
+
+  .btn-eye{
+    display: flex;
+    justify-content:  flex-end;
+    position: relative;
+    bottom: 43px;
+    right: 15px;
+  }
+  .btn-showPass{
+    color: #c5c5c5;
+  }
+  .btn-show{
+    cursor: pointer;
+  }
+  .btn-google{
+    background: #000000;
+    border-radius: 50%;
+    color: #f1f1f1;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  .social-login{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
   }
