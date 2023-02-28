@@ -1,18 +1,12 @@
-import AllInboxZone from "./AllInboxZone"
-import ChatZone from "./ChatZone"
-import InformationZone from "./InformationZone"
-import TopBar from "./TopBar"
-import './ChatAppStyle.css';
+import AppBody from './AppBody';
+import NavBar from './NavBar';
+import './styling.css';
 
 const ChatApp = () => {
     return (
-        <div className="h-screen flex flex-col">
-            <TopBar />
-            <div className="flex w-screen h-full overflow-hidden">
-                <AllInboxZone />
-                <ChatZone />
-                <InformationZone />
-            </div>
+        <div className="h-screen w-full flex flex-col sm:flex-row-reverse bg-custom-black-1">
+            <AppBody />
+            <NavBar />
         </div>
     );
 }

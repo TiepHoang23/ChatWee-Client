@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const UserInput = (props) => {
+const InputComponent = (props) => {
 
     const { styling, placeholder } = props;
 
@@ -11,4 +11,4 @@ const UserInput = (props) => {
     );
 }
 
-export default UserInput;
+export default InputComponent;

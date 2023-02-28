@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.bg-custom-black-1{
+    background-color: #1F1F1F;
+}
+
+.bg-custom-black-2{
+    background-color: #252525;
+}
+
+.bg-custom-black-3{
+    background-color: #363636;
+}
+
+.bg-custom-yellow{
+    background-color: #EDB31E;
+}
+
+.inbox-img{
+    min-height: 64px;
+    min-width: 64px;
+}
+
+.inboxes-list-width{
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .inboxes-list-width{
+        max-width: 40%;
+    }
+}
