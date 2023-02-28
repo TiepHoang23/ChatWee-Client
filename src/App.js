@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React, { Suspense, lazy } from 'react';
 import NotFound from './components/NotFound';
-import TopBar from './components/TopBar';
+import ChatApp from './components/ChatApp';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import LoadingSpinner from './components/LoadingSpinner';
 import { GoogleOAuthProvider } from '@react-oauth/google';
@@ -24,7 +24,7 @@ function App() {
             <Routes>
               <Route index element={<Login />} />
               <Route path='/registration' element={<Register />} />
-              <Route path='/chat' element={<TopBar />} />
+              <Route path='/chat' element={<ChatApp />} />
               <Route path='*' element={<NotFound />} />
             </Routes>
           </Suspense>
