@@ -1,1 +1,1 @@
-###Online multiplayer rubik race game
+# ChatWee - A realtime chat app project
