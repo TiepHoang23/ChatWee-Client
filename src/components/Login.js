@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './LoginForm.css';
 import { loginAPI } from '../api/MutationAPI';
 import { useMutation } from 'react-query';
 import { useForm } from 'react-hook-form';
-import LoadingSpinner from './LoadingSpinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import LoadingSpinner from './LoadingSpinner';
 import LoginGG from './LoginGG';
+import './LoginForm.css';
 function Login() {
   const navigate = useNavigate();
   const {
