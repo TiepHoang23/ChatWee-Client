@@ -2,6 +2,7 @@ import AllInboxZone from "./AllInboxZone"
 import ChatZone from "./ChatZone"
 import InformationZone from "./InformationZone"
 import TopBar from "./TopBar"
+import './ChatAppStyle.css';
 
 const ChatApp = () => {
     return (

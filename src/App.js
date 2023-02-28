@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React, { Suspense, lazy } from 'react';
 import NotFound from './components/NotFound';
-import ChatApp from './components/ChatApp';
+import ChatApp from './components/chatapp-main/ChatApp';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import LoadingSpinner from './components/LoadingSpinner';
 import { GoogleOAuthProvider } from '@react-oauth/google';
