@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #202020;
-    color: white;
-}
 
 .w-inbox-zone{
     width: 140px;

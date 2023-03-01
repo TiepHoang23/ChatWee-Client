@@ -2,17 +2,15 @@
 form {
     border: 3px solid #f1f1f1;
     border-radius: 20px;
-    /* box-shadow: ; */
+    box-shadow: 11px 10px 11px rgba(0, 0, 0, 0.25);
   }
-.container{
+.container-signin{
   position: absolute;
   transform: translate(-50%,-50%);
-  display: flex;
-  justify-content: center;
   left: 50%;
   top: 50%;
 }
-.container input {
+.container-signin input {
     width: 100%;
     padding: 12px;
     margin: 10px 0px;
@@ -22,8 +20,8 @@ form {
   }
 .form-login{
 
-  width: 20em;
-  height: 30em;
+  width: 30em;
+
 }
 .title-login{
   font-size: 30px;
@@ -66,33 +64,12 @@ form {
     .container{
       width: 20em;
     }
+    .content{
+      display: none;
+    }
   }
 
-  .btn-eye{
-    display: flex;
-    justify-content:  flex-end;
-    position: relative;
-    bottom: 43px;
-    right: 15px;
-  }
-  .btn-showPass{
-    color: #c5c5c5;
-  }
-  .btn-show{
-    cursor: pointer;
-  }
-  .btn-google{
-    background: #000000;
-    border-radius: 50%;
-    color: #f1f1f1;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-weight: bolder;
-    cursor: pointer;
-  }
-  .social-login{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-  }
+ .account{
+  text-align: center;
+  margin-bottom: 2em;
+ }

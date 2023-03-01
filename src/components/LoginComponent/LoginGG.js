@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
-import { registerAPI } from '../api/MutationAPI';
+import { registerAPI } from '../../api/MutationAPI';
 function LoginGG() {
   const navigate = useNavigate();
   const onSuccess = async (response) => {

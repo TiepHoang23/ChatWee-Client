@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loginAPI } from '../api/MutationAPI';
+import { loginAPI } from '../../api/MutationAPI';
 import { useMutation } from 'react-query';
 import { useForm } from 'react-hook-form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import LoadingSpinner from './LoadingSpinner';
+import LoadingSpinner from '../LoadingSpinner';
 import LoginGG from './LoginGG';
 import './LoginForm.css';
 function Login() {
@@ -22,10 +22,7 @@ function Login() {
   });
   const [ShowPassword, setShow] = useState(false);
 
-  // Password toggle handler
   const togglePassword = () => {
-    // When the handler is invoked
-    // inverse the boolean state of passwordShown
     setShow(!ShowPassword);
   };
 
@@ -54,6 +51,11 @@ function Login() {
     <LoadingSpinner />
   ) : (
     <div className='container'>
+      <div className='content'>
+        <div className='name-app'>CHATWEE</div>
+        <p className='content-app'> Chat with we !</p>
+        <button className='btn-join'>Join Now</button>
+      </div>
       <form
         method='post'
         onSubmit={handleSubmit(handleOnSubmit)}
@@ -101,9 +103,12 @@ function Login() {
           {errors.password && (
             <div className='text-danger'>{errors.password.message}</div>
           )}
+
           <button className='btn-login' type='submit'>
             LOGIN
           </button>
+          <div className='or-login'></div>
+          <div className='text-login'>Or Login With</div>
           <LoginGG />
         </div>
       </form>

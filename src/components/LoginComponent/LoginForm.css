@@ -1,0 +1,138 @@
+
+form {
+    border: 3px solid #f1f1f1;
+    border-radius: 20px;
+    box-shadow: 11px 10px 11px rgba(0, 0, 0, 0.25);
+  }
+.container{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  left: 50%;
+  top: 50%;
+}
+.container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+.form-login{
+
+  width: 20em;
+  height: 30em;
+}
+.title-login{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+}
+  .btn-login {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  button{
+    border-radius: 20px;
+    font-weight: bold;
+
+
+  }
+  .element-form{
+    margin: 20px;
+  }
+ 
+.text-danger{
+  color: #d8001d;
+  font-weight: 500;
+}
+  @media screen and (max-width: 600px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .container{
+      width: 20em;
+    }
+    .content{
+      display: none;
+    }
+  }
+
+  .btn-eye{
+    display: flex;
+    justify-content:  flex-end;
+    position: relative;
+    bottom: 43px;
+    right: 15px;
+  }
+  .btn-showPass{
+    color: #c5c5c5;
+  }
+  .btn-show{
+    cursor: pointer;
+  }
+  .btn-google{
+    background: #000000;
+    border-radius: 50%;
+    color: #f1f1f1;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  .social-login{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+.name-app{
+  font-size: 7em;
+  font-weight: bolder;
+
+}
+.content-app{
+  font-size: 2em;
+  font-weight: 200;
+
+}
+.content{
+  margin-left: 10em;
+}
+.btn-join{
+  margin-top: 2em;
+  background: #04AA6D;
+  color: #fff;
+  text-align: center;
+  height: 2em;
+  width: 10em;
+}
+.or-login{
+    border: 1px solid #565656;
+    height: 1px;
+    margin-top: 20px;
+}
+.text-login{
+  position: relative;
+  bottom: 20px;
+  font-size: 15px;
+  text-align: center;
+  background: #fff;
+  width: fit-content;
+  left: 33%;
+  padding: 5px;
+  
+}

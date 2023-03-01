@@ -7,8 +7,8 @@ import LoadingSpinner from './components/LoadingSpinner';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 const queryClient = new QueryClient();
 
-const Login = lazy(() => import('./components/Login'));
-const Register = lazy(() => import('./components/Register'));
+const Login = lazy(() => import('./components/LoginComponent/Login'));
+const Register = lazy(() => import('./components/RegisterComponent/Register'));
 function App() {
   return (
     <GoogleOAuthProvider clientId='386932037035-k8v833noqjk7m4***********.apps.googleusercontent.com'>
