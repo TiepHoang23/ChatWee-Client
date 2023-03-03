@@ -16,20 +16,21 @@ function Login() {
     formState: { errors },
   } = useForm();
 
-  const [error, setError] = useState({
-    status: false,
-    message: null,
-  });
+  // const [error, setError] = useState({
+  //   status: false,
+  //   message: null,
+  // });
   const [ShowPassword, setShow] = useState(false);
 
   const togglePassword = () => {
     setShow(!ShowPassword);
   };
 
-  console.log(error);
+  // console.log(error);
 
   const mutation = useMutation(loginAPI, {
     onSuccess: (response) => {
+      console.log(response.data);
       const { status } = response.data;
 
       if (status) {
@@ -37,14 +38,12 @@ function Login() {
       }
     },
     onError: (e) => {
-      setError({
-        status: false,
-        message: e.message,
-      });
+      console.log(e.message);
     },
   });
-  const handleOnSubmit = async ({ username, password }) => {
-    await mutation.mutate({ username, password });
+  const handleOnSubmit = async ({ email, password }) => {
+    console.log({ email, password });
+    await mutation.mutate({ email, password });
   };
 
   return mutation.isLoading ? (
@@ -64,16 +63,16 @@ function Login() {
         <div className='title-login'>LOGIN</div>
         <div className='element-form'>
           <label htmlFor='uname'>
-            <b>Username</b>
+            <b>Email</b>
           </label>
           <input
             type='text'
-            {...register('username', { required: 'Username is required' })}
-            placeholder='Enter Username'
+            {...register('email', { required: 'Email is required' })}
+            placeholder='Enter Email'
             className='uname'
           ></input>
-          {errors.username && (
-            <div className='text-danger'>{errors.username.message}</div>
+          {errors.email && (
+            <div className='text-danger'>{errors.email.message}</div>
           )}
           <label htmlFor='psw'>
             <b>Password</b>
@@ -107,6 +106,12 @@ function Login() {
           <button className='btn-login' type='submit'>
             LOGIN
           </button>
+          <div className='signup'>
+            Don't have an account?{' '}
+            <a href='/registration'>
+              <b>Signup</b>
+            </a>
+          </div>
           <div className='or-login'></div>
           <div className='text-login'>Or Login With</div>
           <LoginGG />
