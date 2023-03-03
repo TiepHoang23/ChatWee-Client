@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    color: white;
-}
 
 .bg-custom-black-1{
     background-color: #1F1F1F;

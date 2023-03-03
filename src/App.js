@@ -11,7 +11,7 @@ const Login = lazy(() => import('./components/LoginComponent/Login'));
 const Register = lazy(() => import('./components/RegisterComponent/Register'));
 function App() {
   return (
-    <GoogleOAuthProvider clientId='386932037035-k8v833noqjk7m4***********.apps.googleusercontent.com'>
+    <GoogleOAuthProvider clientId='734117136162-kl2c09emcpecvp5rm3ujo70g76rv2ufi.apps.googleusercontent.com'>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Suspense
