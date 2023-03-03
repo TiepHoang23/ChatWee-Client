@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginAPI } from '../../api/MutationAPI';
 import { useMutation } from 'react-query';
@@ -8,7 +8,9 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import LoadingSpinner from '../LoadingSpinner';
 import LoginGG from './LoginGG';
 import './LoginForm.css';
+import { AuthContext } from '../../context/auth';
 function Login() {
+  const { user, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const {
     register,
@@ -30,10 +32,12 @@ function Login() {
 
   const mutation = useMutation(loginAPI, {
     onSuccess: (response) => {
-      console.log(response.data);
-      const { status } = response.data;
+      const { status, data } = response.data;
 
       if (status) {
+        localStorage.setItem('data', JSON.stringify(data));
+        setUser(data);
+        console.log(user);
         navigate('/chat');
       }
     },
