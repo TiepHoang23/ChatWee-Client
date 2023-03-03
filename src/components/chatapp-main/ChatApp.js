@@ -4,7 +4,7 @@ import './styling.css';
 
 const ChatApp = () => {
     return (
-        <div className="h-screen w-full flex flex-col sm:flex-row-reverse bg-custom-black-1">
+        <div className="h-screen w-full flex flex-col sm:flex-row-reverse bg-custom-black-1 text-white">
             <AppBody />
             <NavBar />
         </div>
