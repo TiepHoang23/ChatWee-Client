@@ -31,13 +31,9 @@ const MessageDisplayZone = () => {
     }
     fecthAPI();
     socket.emit('join-room', idRoom);
-    socket.on('join-room', (data) => {
-      console.log(data);
-    });
+    socket.on('join-room', (data) => {});
     socket.on('chat-message', (data) => {
-      console.log(data);
       setMessageReceive(data);
-      console.log(MessageReceive);
     });
     socket.on('connect_error', (err) => {
       if (err.message === 'xhr poll error') return;
@@ -54,14 +50,13 @@ const MessageDisplayZone = () => {
       socket.off('connect_error');
       socket.off('handle-error');
     };
-  }, []);
+  }, [idRoom]);
 
   return (
     <div className='bg-custom-black-3 w-full h-full flex flex-col overflow-y-scroll p-4'>
       <div className='bg-transparent w-full'>
         {oldMessages &&
           oldMessages.map((item, index) => {
-            console.log(item);
             const userid = JSON.parse(localStorage.getItem('data')).userId;
             let From = 'false';
             if (item.userId === userid) {

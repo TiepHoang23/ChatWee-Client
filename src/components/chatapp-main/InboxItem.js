@@ -1,8 +1,11 @@
-const InboxItem = (props) => {
-  const { inboxName } = props;
+const InboxItem = ({ inboxName, onClick }) => {
+  // const { inboxName } = props;
 
   return (
-    <div className='rounded-lg cursor-pointer p-2 hover:bg-gray-700 duration-150 flex justify-center'>
+    <div
+      className='rounded-lg cursor-pointer p-2 hover:bg-gray-700 duration-150 flex justify-center'
+      onClick={onClick}
+    >
       <img
         className='inbox-img rounded-full'
         alt=''
