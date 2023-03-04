@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import LoadingSpinner from '../LoadingSpinner';
-import LoginGG from './LoginGG';
+//import LoginGG from './LoginGG';
 import './LoginForm.css';
 import { AuthContext } from '../../context/auth';
 function Login() {
@@ -118,7 +118,7 @@ function Login() {
           </div>
           <div className='or-login'></div>
           <div className='text-login'>Or Login With</div>
-          <LoginGG />
+          
         </div>
       </form>
     </div>

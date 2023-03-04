@@ -8,6 +8,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import AuthContextProvider from './context/auth';
 import { SocketContext, socket } from './context/socket';
 
+import VideoCall from './components/video-call/VideoCall';
 const queryClient = new QueryClient();
 
 const Login = lazy(() => import('./components/LoginComponent/Login'));

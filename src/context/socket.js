@@ -2,6 +2,7 @@ import { createContext } from 'react';
 import { io } from 'socket.io-client';
 
 export const SocketContext = createContext();
+
 function ConnectSocket() {
   const token = JSON.parse(localStorage.getItem('data'))?.token;
   if (token) {
